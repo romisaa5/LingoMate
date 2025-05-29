@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:google_transalate/features/home/presentation/home_view.dart';
 import 'package:google_transalate/features/splash/splash_view.dart';
 
 void main() {
@@ -18,7 +19,7 @@ class LingoMateApp extends StatelessWidget {
       builder: (context, child) {
         return MaterialApp(
           debugShowCheckedModeBanner: false,
-          home: SplashView(),
+          home: HomeView(),
         );
       },
     );
