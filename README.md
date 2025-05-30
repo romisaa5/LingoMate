@@ -31,13 +31,13 @@ LingoMate is a Flutter application that provides easy and intuitive language tra
 ## 📸 Screenshots
 
 ### 🟡 Splash Screen
-![Splash Screen](assets/README Assets/splash.png)
+![Splash Screen](assets/readme_assets/splash.png)
 
 ### 🟡 About Page
-![About Page](assets/README Assets/about.png)
+![About Page](assets/readme_assets/about.png)
 
 ### 🟡 Contact Page
-![Contact Page](assets/README Assets/contact_us.PNG)
+![Contact Page](assets/readme_assets/contact_us.PNG)
 
 
 ## 🚀 Getting Started
