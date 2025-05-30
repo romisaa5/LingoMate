@@ -2,7 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:go_router/go_router.dart';
 import 'package:google_transalate/core/theme/text_theme.dart';
-import 'package:google_transalate/core/utils/routes/routes.dart';
+import 'package:google_transalate/core/utils/routes/app_router.dart';
+
 
 class SplashView extends StatefulWidget {
   const SplashView({super.key});
@@ -17,7 +18,7 @@ class _SplashViewState extends State<SplashView> {
     super.initState();
     Future.delayed(const Duration(seconds: 4), () {
       if (!mounted) return;
-      GoRouter.of(context).pushReplacement(home);
+      GoRouter.of(context).pushReplacement(AppRouter.home);
     });
   }
 

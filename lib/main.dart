@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:google_transalate/features/home/presentation/home_view.dart';
-import 'package:google_transalate/features/splash/splash_view.dart';
+import 'package:google_transalate/core/utils/routes/app_router.dart';
+
 
 void main() {
   runApp(const LingoMateApp());
@@ -17,9 +17,9 @@ class LingoMateApp extends StatelessWidget {
       minTextAdapt: true,
       splitScreenMode: true,
       builder: (context, child) {
-        return MaterialApp(
+        return MaterialApp.router(
           debugShowCheckedModeBanner: false,
-          home: HomeView(),
+          routerConfig: AppRouter.router,
         );
       },
     );
