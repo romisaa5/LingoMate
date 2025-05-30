@@ -4,8 +4,6 @@ import 'package:go_router/go_router.dart';
 import 'package:google_transalate/core/theme/app_colors.dart';
 import 'package:google_transalate/core/theme/text_theme.dart';
 import 'package:google_transalate/core/utils/routes/app_router.dart';
-import 'package:google_transalate/features/home/presentation/views/camera_view.dart';
-import 'package:google_transalate/features/home/presentation/views/chat_view.dart';
 import 'package:google_transalate/features/home/presentation/views/favorites_view.dart';
 import 'package:google_transalate/features/home/presentation/views/history_view.dart';
 import 'package:google_transalate/features/home/presentation/views/transalte_view.dart';
@@ -20,8 +18,6 @@ class HomeView extends StatefulWidget {
 class _HomeViewState extends State<HomeView> {
   int _selectedIndex = 0;
   final List<Widget> _views = [
-    const ChatView(),
-    const CameraView(),
     const TransalteView(),
     const HistoryView(),
     const FavoritesView(),
@@ -100,9 +96,6 @@ class _HomeViewState extends State<HomeView> {
           });
         },
         items: [
-          BottomNavigationBarItem(icon: Icon(Icons.chat), label: 'Chat'),
-
-          BottomNavigationBarItem(icon: Icon(Icons.camera), label: 'Camera'),
           BottomNavigationBarItem(
             icon: Icon(Icons.translate),
             label: 'Translate',
