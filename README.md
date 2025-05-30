@@ -1,16 +1,47 @@
-# google_transalate
+# 📱 LingoMate - Language Translator App
 
-A new Flutter project.
+LingoMate is a Flutter application that provides easy and intuitive language translation using various input methods like text, camera, and voice chat.
 
-## Getting Started
+---
 
-This project is a starting point for a Flutter application.
+## ✅ Features Implemented
 
-A few resources to get you started if this is your first Flutter project:
+- ✅ Splash Screen
+- ✅ About Page
+- ✅ Contact Page
+- ✅ App Drawer with navigation to pages
+- ✅ Bottom Navigation Bar with multiple views:
+  - Chat
+  - Camera
+  - Translate
+  - History
+  - Favorites
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+---
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## 🔧 Features In Progress
+
+- ❌ Translate View logic
+- ❌ Camera functionality (OCR/scan)
+- ❌ Chat translation logic
+- ❌ History & Favorites storage
+
+
+---
+## 📸 Screenshots
+
+### 🟡 Splash Screen
+![Splash Screen](assets/README Assets/splash.png)
+
+### 🟡 About Page
+![About Page](assets/README Assets/about.png)
+
+### 🟡 Contact Page
+![Contact Page](assets/README Assets/contact_us.PNG)
+
+
+## 🚀 Getting Started
+
+1. **Clone the repo**  
+```bash
+git clone https://github.com/romisaa5/LingoMate
