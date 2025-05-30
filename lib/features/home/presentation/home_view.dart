@@ -110,7 +110,7 @@ class _HomeViewState extends State<HomeView> {
           BottomNavigationBarItem(icon: Icon(Icons.history), label: 'History'),
 
           BottomNavigationBarItem(
-            icon: Icon(Icons.favorite),
+            icon: Icon(Icons.star),
             label: 'Favorites',
           ),
         ],

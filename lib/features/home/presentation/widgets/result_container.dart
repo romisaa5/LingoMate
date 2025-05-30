@@ -59,7 +59,7 @@ class ResultContainer extends StatelessWidget {
                 },
               ),
               IconButton(
-                icon: const Icon(Icons.favorite_border, color: Colors.black),
+                icon: const Icon(Icons.star_border, color: Colors.black),
                 onPressed: () {
                   // Implement favorite functionality
                 },
