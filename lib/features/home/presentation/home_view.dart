@@ -75,6 +75,13 @@ class _HomeViewState extends State<HomeView> {
                 GoRouter.of(context).push(AppRouter.contact);
               },
             ),
+            ListTile(
+              leading: Icon(Icons.feedback),
+              title: Text('Feedback'),
+              onTap: () {
+                GoRouter.of(context).push(AppRouter.feedback);
+              },
+            ),
           ],
         ),
       ),
