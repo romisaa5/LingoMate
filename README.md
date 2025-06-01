@@ -30,6 +30,7 @@ LingoMate is a Flutter application that provides easy and intuitive language tra
 
 <p align="center">
   <img src="assets/readme_assets/splash.png" alt="Splash Screen" width="200"/>
+  <img src="assets/readme_assets/drawer.PNG" alt="About Page" width="200"/>
   <img src="assets/readme_assets/about.png" alt="About Page" width="200"/>
   <img src="assets/readme_assets/contact_us.PNG" alt="Contact Page" width="200"/>
  <img src="assets/readme_assets/feedback.png" alt="Contact Page" width="200"/>

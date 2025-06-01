@@ -46,16 +46,25 @@ class _HomeViewState extends State<HomeView> {
           padding: EdgeInsets.zero,
           children: [
             DrawerHeader(
-              decoration: BoxDecoration(color: AppColors.primary),
-              child: Row(
-                spacing: 20.w,
+              decoration: BoxDecoration(
+                color: AppColors.primary,
+                boxShadow: [
+                  BoxShadow(
+                    color: Colors.black.withValues(alpha: 0.2),
+                    blurRadius: 8,
+                    offset: Offset(0, 2),
+                  ),
+                ],
+              ),
+              child: Column(
+                spacing: 10.h,
                 children: [
-                  Text('LingoMate', style: Styles.textStyle22),
                   Image.asset(
                     'assets/images/translate_logo.png',
-                    width: 50,
-                    height: 50,
+                    width: 70,
+                    height: 70,
                   ),
+                  Text('LingoMate', style: Styles.textStyle20),
                 ],
               ),
             ),
@@ -109,10 +118,7 @@ class _HomeViewState extends State<HomeView> {
           ),
           BottomNavigationBarItem(icon: Icon(Icons.history), label: 'History'),
 
-          BottomNavigationBarItem(
-            icon: Icon(Icons.star),
-            label: 'Favorites',
-          ),
+          BottomNavigationBarItem(icon: Icon(Icons.star), label: 'Favorites'),
         ],
       ),
     );

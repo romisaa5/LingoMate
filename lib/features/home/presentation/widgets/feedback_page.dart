@@ -25,6 +25,7 @@ class _FeedbackPageState extends State<FeedbackPage> {
     if (await canLaunchUrl(emailUri)) {
       await launchUrl(emailUri);
     } else {
+      if (!mounted) return;
       ScaffoldMessenger.of(
         context,
       ).showSnackBar(const SnackBar(content: Text('Could not open email app')));
@@ -90,7 +91,10 @@ class _FeedbackPageState extends State<FeedbackPage> {
                   ),
                 ),
                 onPressed: sendEmail,
-                child: Text('Send', style: Styles.textStyle16.copyWith(color: Colors.white)),
+                child: Text(
+                  'Send',
+                  style: Styles.textStyle16.copyWith(color: Colors.white),
+                ),
               ),
             ),
 
