@@ -1,5 +1,6 @@
 import 'package:go_router/go_router.dart';
 import 'package:google_transalate/features/home/presentation/home_view.dart';
+import 'package:google_transalate/features/home/presentation/views/select_langauge_view.dart';
 import 'package:google_transalate/features/home/presentation/widgets/about_page.dart';
 import 'package:google_transalate/features/home/presentation/widgets/contact_page.dart';
 import 'package:google_transalate/features/home/presentation/widgets/feedback_page.dart';
@@ -11,7 +12,7 @@ class AppRouter {
   static const String feedback = '/feedback';
   static const String about = '/about';
   static const String contact = '/contact';
-
+  static const String selectlanguage = '/selectlanguage';
 
   static final router = GoRouter(
     initialLocation: splash,
@@ -21,6 +22,10 @@ class AppRouter {
       GoRoute(path: about, builder: (context, state) => AboutPage()),
       GoRoute(path: contact, builder: (context, state) => ContactPage()),
       GoRoute(path: feedback, builder: (context, state) => FeedbackPage()),
+      GoRoute(
+        path: selectlanguage,
+        builder: (context, state) => SelectLangaugeView(),
+      ),
     ],
   );
 }

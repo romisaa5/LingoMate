@@ -15,7 +15,7 @@ class TransalteView extends StatelessWidget {
         padding: const EdgeInsets.all(16.0),
         child: SingleChildScrollView(
           child: Column(
-            spacing: 20.h,
+            spacing: 15.h,
             children: [
               SelectLangauge(),
               TransalteContainer(),

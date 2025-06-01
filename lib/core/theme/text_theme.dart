@@ -7,10 +7,12 @@ class Styles {
     fontWeight: FontWeight.w600,
   );
   static final textStyle12 = TextStyle(
+    fontFamily: 'Lato',
     fontSize: 12.sp,
     fontWeight: FontWeight.normal,
   );
   static final textStyle14 = TextStyle(
+    fontFamily: 'Lato',
     fontSize: 14.sp,
     fontWeight: FontWeight.normal,
   );

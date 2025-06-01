@@ -3,9 +3,15 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_transalate/core/theme/app_colors.dart';
 import 'package:google_transalate/core/theme/text_theme.dart';
 
-class TransalteContainer extends StatelessWidget {
+class TransalteContainer extends StatefulWidget {
   const TransalteContainer({super.key});
 
+  @override
+  State<TransalteContainer> createState() => _TransalteContainerState();
+}
+
+class _TransalteContainerState extends State<TransalteContainer> {
+  TextEditingController transalatorController = TextEditingController();
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -42,7 +48,8 @@ class TransalteContainer extends StatelessWidget {
               ],
             ),
             SizedBox(height: 10),
-            TextField(
+            TextFormField(
+              controller: transalatorController,
               maxLines: 4,
               decoration: InputDecoration(
                 border: InputBorder.none,
