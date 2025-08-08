@@ -3,6 +3,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:go_router/go_router.dart';
 import 'package:google_transalate/core/theme/text_theme.dart';
 import 'package:google_transalate/core/utils/routes/app_router.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 
 class SplashView extends StatefulWidget {
@@ -16,12 +17,19 @@ class _SplashViewState extends State<SplashView> {
   @override
   void initState() {
     super.initState();
-    Future.delayed(const Duration(seconds: 4), () {
-      if (!mounted) return;
-      GoRouter.of(context).pushReplacement(AppRouter.home);
-    });
+    _checkOnboardingStatus();
   }
-
+Future<void> _checkOnboardingStatus() async {
+  await Future.delayed(const Duration(seconds: 4)); 
+  final prefs = await SharedPreferences.getInstance();
+  final isOnboardingCompleted = prefs.getBool('onboarding_completed') ?? false;
+  if (!mounted) return;
+  if (isOnboardingCompleted) {
+    GoRouter.of(context).go(AppRouter.home); 
+  } else {
+    GoRouter.of(context).go(AppRouter.onboard); 
+  }
+}
   @override
   Widget build(BuildContext context) {
     return Scaffold(

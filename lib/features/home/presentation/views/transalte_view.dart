@@ -19,7 +19,7 @@ class TransalteView extends StatelessWidget {
             children: [
               SelectLangauge(),
               TransalteContainer(),
-              ResultContainer(),
+              ResultContainer(result: 'Translated text will appear here'),
             ],
           ),
         ),

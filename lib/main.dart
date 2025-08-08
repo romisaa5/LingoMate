@@ -4,6 +4,7 @@ import 'package:google_transalate/core/utils/routes/app_router.dart';
 
 
 void main() {
+  WidgetsFlutterBinding.ensureInitialized();
   runApp(const LingoMateApp());
 }
 

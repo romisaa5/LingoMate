@@ -1,11 +1,13 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:google_transalate/core/errors/custom_snackbar.dart';
 import 'package:google_transalate/core/theme/app_colors.dart';
 import 'package:google_transalate/core/theme/text_theme.dart';
 
 class ResultContainer extends StatelessWidget {
-  const ResultContainer({super.key});
-
+  const ResultContainer({super.key, required this.result});
+  final String result;
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -36,10 +38,8 @@ class ResultContainer extends StatelessWidget {
             ),
           ),
           Text(
-            'Translated text will appear here',
-            style: Styles.textStyle14.copyWith(
-              color: Colors.black54,
-            ),
+            result,
+            style: Styles.textStyle14.copyWith(color: Colors.black54),
           ),
           const Spacer(),
           Row(
@@ -49,7 +49,11 @@ class ResultContainer extends StatelessWidget {
               IconButton(
                 icon: const Icon(Icons.copy, color: Colors.black),
                 onPressed: () {
-                  // Implement copy functionality
+                  Clipboard.setData(ClipboardData(text: result));
+                  showDoneSnackBar(
+                    context: context,
+                    message: 'Text copied to clipboard',
+                  );
                 },
               ),
               IconButton(
@@ -66,7 +70,6 @@ class ResultContainer extends StatelessWidget {
               ),
             ],
           ),
-          
         ],
       ),
     );

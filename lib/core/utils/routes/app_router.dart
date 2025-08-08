@@ -4,10 +4,12 @@ import 'package:google_transalate/features/home/presentation/views/select_langau
 import 'package:google_transalate/features/home/presentation/widgets/about_page.dart';
 import 'package:google_transalate/features/home/presentation/widgets/contact_page.dart';
 import 'package:google_transalate/features/home/presentation/widgets/feedback_page.dart';
+import 'package:google_transalate/features/onboarding/presentation/ui/views/onboarding_screen.dart';
 import 'package:google_transalate/features/splash/splash_view.dart';
 
 class AppRouter {
   static const String splash = '/splash';
+  static const String onboard= '/onboard';
   static const String home = '/home';
   static const String feedback = '/feedback';
   static const String about = '/about';
@@ -18,6 +20,7 @@ class AppRouter {
     initialLocation: splash,
     routes: [
       GoRoute(path: splash, builder: (context, state) => SplashView()),
+      GoRoute(path: onboard, builder: (context, state) => OnboardingScreen()),
       GoRoute(path: home, builder: (context, state) => HomeView()),
       GoRoute(path: about, builder: (context, state) => AboutPage()),
       GoRoute(path: contact, builder: (context, state) => ContactPage()),
